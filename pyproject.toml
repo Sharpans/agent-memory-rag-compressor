@@ -1,0 +1,14 @@
+[project]
+name = "agent-memory-rag-compressor"
+version = "0.1.0"
+description = "A lightweight shared memory, retrieval, and context compression prototype for multi-agent LLM workflows."
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ruichao Xia" }]
+
+[project.scripts]
+agent-memory = "src.memory_cli:main"
+
+[tool.setuptools]
+packages = ["src"]
