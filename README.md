@@ -2,8 +2,6 @@
 
 A lightweight prototype for long-running multi-agent LLM workflows. It combines shared agent memory, keyword-based retrieval, and extractive context compression so agents can reuse important past information without passing an entire conversation history into every prompt.
 
-This repository is an original educational implementation inspired by the ideas behind `mem0ai/mem0`, `microsoft/LLMLingua`, MacRAG, MemAgent, and OpenViking. It does not copy upstream source code.
-
 ## Motivation
 
 Multi-agent LLM systems often fail when useful information is buried in long conversation histories. Simply expanding context windows is expensive and does not guarantee better recall. A practical agent workflow needs three complementary capabilities:
@@ -67,18 +65,12 @@ Compact context for the next LLM call
 
 - Auditable: retrieval and compression are transparent and inspectable
 - Conservative: no model-generated facts are written into memory by default
-- Modular: the retriever and compressor can be replaced with vector search or LLMLingua-style compression
+- Modular: the retriever and compressor can be replaced with vector search or model-based prompt compression
 - Research-friendly: missing evaluation metrics are kept as TODOs until measured
 
-## Relationship to Reference Projects
+## Technical Keywords
 
-- `mem0ai/mem0`: informs the idea of a universal memory layer for AI agents
-- `microsoft/LLMLingua`: informs the motivation for prompt/context compression
-- `BytedTsinghua-SIA/MemAgent`: informs long-context memory-agent design motivation
-- `volcengine/OpenViking`: informs the combination of agent memory, knowledge RAG, and skills
-- MacRAG: informs multi-scale adaptive context retrieval
-
-This repository is not a fork and does not include source code from those projects.
+Agent memory, multi-agent systems, RAG, context compression, long-context LLM workflows, shared memory layer, memory namespaces, prompt budget optimization, auditable retrieval.
 
 ## Repository Structure
 
